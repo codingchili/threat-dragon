@@ -17,7 +17,15 @@ While we do our best to maintain a fully functioning main branch, mistakes will 
 Additionally, the full end to end test suite is only run once per day, so errors may not be immediately available.
 
 ## Deploy
-The latest image is deployed to [https://www.threatdragon.com/](https://www.threatdragon.com/).
+The latest image is deployed to [https://www.threatdragon.com/](https://www.threatdragon.com/)
+that is hosted on [Heroku](https://www.heroku.com/).
+Debug of deployment failures can be made by inspecting the logs via
+the [Heroku command line](https://devcenter.heroku.com/articles/heroku-cli):
+
+```
+heroku login -i
+heroku logs --tail --app threatdragon-v2
+```
 
 ## Smokes
 Smoke tests are run against the deployed image to ensure the deployment succeeded.
