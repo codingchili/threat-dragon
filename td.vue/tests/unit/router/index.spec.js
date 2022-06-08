@@ -13,7 +13,7 @@ describe('router', () => {
 
         beforeEach(() => {
             homeRoute = router.get().getRoutes()
-                .find(x => x.name === 'Home');
+                .find(x => x.name === 'HomePage');
         });
 
         it('is the default path', () => {
@@ -21,7 +21,7 @@ describe('router', () => {
         });
 
         it('uses the home view', () => {
-            expect(homeRoute.components.default.name).toEqual('Home');
+            expect(homeRoute.components.default.name).toEqual('HomePage');
         });
     });
 
@@ -30,7 +30,7 @@ describe('router', () => {
 
         beforeEach(() => {
             dashboardRoute = router.get().getRoutes()
-                .find(x => x.name === 'Dashboard');
+                .find(x => x.name === 'MainDashboard');
         });
 
         it('uses the /dashboard path', () => {
@@ -45,7 +45,7 @@ describe('router', () => {
             });
 
             it('uses the dashboard view', () => {
-                expect(dashboardComponent.default.name).toEqual('Dashboard');
+                expect(dashboardComponent.default.name).toEqual('MainDashboard');
             });
         });
     });

@@ -1,7 +1,7 @@
 import { localRoutes } from '@/router/local.js';
 
 describe('routes/local.js', () => {
-    describe('ThreatModel', () => {
+    describe('Threat Model', () => {
         let route;
 
         beforeEach(() => {
@@ -13,13 +13,13 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/:threatmodel');
         });
 
-        it('uses the ThreatModel view as a lazily loaded component', async () => {
+        it('uses the Threat Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('ThreatModel');
         });
     });
 
-    describe('ThreatModel Edit', () => {
+    describe('Threat Model Edit', () => {
         let route;
 
         beforeEach(() => {
@@ -31,7 +31,7 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/:threatmodel/edit');
         });
 
-        it('uses the ThreatModelEdit view as a lazily loaded component', async () => {
+        it('uses the Threat Model Edit view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('ThreatModelEdit');
         });
@@ -49,14 +49,14 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/:threatmodel/edit/:diagram');
         });
 
-        it('uses the Diagram view as a lazily loaded component', async () => {
+        it('uses the Diagram Edit view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Diagram');
+            expect(cmp.default.name).toEqual('DiagramEdit');
         });
     });
 
 
-    describe('NewThreatModel', () => {
+    describe('New Threat Model', () => {
         let route;
 
         beforeEach(() => {
@@ -68,13 +68,13 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/threatmodel/new');
         });
 
-        it('uses the NewThreatModel view as a lazily loaded component', async () => {
+        it('uses the New Threat Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('NewThreatModel');
         });
     });
 
-    describe('ThreatModelImport', () => {
+    describe('Threat Model Import', () => {
         let route;
 
         beforeEach(() => {
@@ -86,13 +86,13 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/threatmodel/import');
         });
 
-        it('uses the Import view as a lazily loaded component', async () => {
+        it('uses the Import Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Import');
+            expect(cmp.default.name).toEqual('ImportModel');
         });
     });
 
-    describe('Report', () => {
+    describe('Report Model', () => {
         let route;
 
         beforeEach(() => {
@@ -104,13 +104,13 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/:threatmodel/report');
         });
 
-        it('uses the Import view as a lazily loaded component', async () => {
+        it('uses the Report Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Report');
+            expect(cmp.default.name).toEqual('ReportModel');
         });
     });
     
-    describe('Upgrade', () => {
+    describe('Upgrade Diagram', () => {
         let route;
 
         beforeEach(() => {
@@ -122,9 +122,9 @@ describe('routes/local.js', () => {
             expect(route.path).toEqual('/local/:threatmodel/upgrade');
         });
 
-        it('uses the ThreatModelEdit view as a lazily loaded component', async () => {
+        it('uses the Upgrade Diagram view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Upgrade');
+            expect(cmp.default.name).toEqual('UpgradeDiagram');
         });
     });
 });

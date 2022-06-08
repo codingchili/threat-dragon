@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 
-import Dashboard from '@/views/Dashboard.vue';
+import MainDashboard from '@/views/MainDashboard.vue';
 import DashboardAction from '@/components/DashboardAction.vue';
 
-describe('Dashboard.vue', () => {
+describe('Main Dashboard view', () => {
     let wrapper, localVue, mockStore;
 
     beforeEach(() => {
@@ -22,7 +22,7 @@ describe('Dashboard.vue', () => {
                 }
             }
         });
-        wrapper = shallowMount(Dashboard, {
+        wrapper = shallowMount(MainDashboard, {
             localVue,
             stubs: {
                 'font-awesome-icon': { template },

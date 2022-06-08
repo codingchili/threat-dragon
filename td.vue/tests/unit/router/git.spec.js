@@ -1,7 +1,7 @@
 import { gitRoutes } from '@/router/git.js';
 
 describe('routes/git.js', () => {
-    describe('Repository', () => {
+    describe('Repository Access', () => {
         let route;
 
         beforeEach(() => {
@@ -13,13 +13,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/repository');
         });
 
-        it('uses the Repository view as a lazily loaded component', async () => {
+        it('uses the Repository Access view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Repository');
+            expect(cmp.default.name).toEqual('RepositoryAccess');
         });
     });
 
-    describe('Branch', () => {
+    describe('Branch Access', () => {
         let route;
 
         beforeEach(() => {
@@ -31,13 +31,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/branch');
         });
 
-        it('uses the Branch view as a lazily loaded component', async () => {
+        it('uses the Branch Access view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Branch');
+            expect(cmp.default.name).toEqual('BranchAccess');
         });
     });
 
-    describe('ThreatModelSelect', () => {
+    describe('Threat Model Select', () => {
         let route;
 
         beforeEach(() => {
@@ -49,13 +49,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/threatmodels');
         });
 
-        it('uses the ThreatModelSelect view as a lazily loaded component', async () => {
+        it('uses the Threat Model Select view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('ThreatModelSelect');
         });
     });
 
-    describe('NewThreatModel', () => {
+    describe('New Threat Model', () => {
         let route;
 
         beforeEach(() => {
@@ -67,13 +67,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/new');
         });
 
-        it('uses the NewThreatModel view as a lazily loaded component', async () => {
+        it('uses the New Threat Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('NewThreatModel');
         });
     });
 
-    describe('ThreatModel', () => {
+    describe('Threat Model', () => {
         let route;
 
         beforeEach(() => {
@@ -85,13 +85,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/:threatmodel');
         });
 
-        it('uses the ThreatModel view as a lazily loaded component', async () => {
+        it('uses the Threat Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('ThreatModel');
         });
     });
 
-    describe('ThreatModelEdit', () => {
+    describe('Threat Model Edit', () => {
         let route;
 
         beforeEach(() => {
@@ -103,13 +103,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/:threatmodel/edit');
         });
 
-        it('uses the ThreatModelEdit view as a lazily loaded component', async () => {
+        it('uses the Threat Model Edit view as a lazily loaded component', async () => {
             const cmp = await route.component();
             expect(cmp.default.name).toEqual('ThreatModelEdit');
         });
     });
 
-    describe('DiagramEdit', () => {
+    describe('Diagram Edit', () => {
         let route;
 
         beforeEach(() => {
@@ -121,13 +121,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/:threatmodel/edit/:diagram');
         });
 
-        it('uses the Diagram view as a lazily loaded component', async () => {
+        it('uses the Diagram Edit view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Diagram');
+            expect(cmp.default.name).toEqual('DiagramEdit');
         });
     });
 
-    describe('Report', () => {
+    describe('Report Model', () => {
         let route;
 
         beforeEach(() => {
@@ -139,13 +139,13 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/:threatmodel/report');
         });
 
-        it('uses the Diagram view as a lazily loaded component', async () => {
+        it('uses the Report Model view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Report');
+            expect(cmp.default.name).toEqual('ReportModel');
         });
     });
 
-    describe('Upgrade', () => {
+    describe('Upgrade Diagram', () => {
         let route;
 
         beforeEach(() => {
@@ -157,9 +157,9 @@ describe('routes/git.js', () => {
             expect(route.path).toEqual('/git/:provider/:repository/:branch/:threatmodel/upgrade');
         });
 
-        it('uses the Diagram view as a lazily loaded component', async () => {
+        it('uses the Upgrade Diagram view as a lazily loaded component', async () => {
             const cmp = await route.component();
-            expect(cmp.default.name).toEqual('Upgrade');
+            expect(cmp.default.name).toEqual('UpgradeDiagram');
         });
     });
 });
